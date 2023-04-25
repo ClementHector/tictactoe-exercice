@@ -1,0 +1,34 @@
+repos:
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.910
+    hooks:
+    -   id: mypy
+        additional_dependencies:
+        -   types-setuptools
+        -   types-requests
+
+-   repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.7.4
+    hooks:
+    -   id: pylint
+        args:
+        -   --max-line-length=120
+        -   --disable=C0301
+
+-   repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.5.7
+    hooks:
+    -   id: autopep8
+        args:
+        -   --aggressive
+        -   --aggressive
+        -   --in-place
+        -   --max-line-length=120
+
+-   repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+    -   id: black
+        language_version: python3.9
+        exclude: setup.py
+        args: [--line-length=120]
