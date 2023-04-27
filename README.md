@@ -1,4 +1,4 @@
-#DESCRIPTION:
+# DESCRIPTION:
 
 If we were to set up a Tic-Tac-Toe game, we would want to know whether the board's current state is solved, wouldn't we? Our goal is to create a function that will check that for us!
 
